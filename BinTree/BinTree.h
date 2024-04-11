@@ -1,7 +1,7 @@
 #pragma once
 #include <iomanip>
 
-class BinarySearchTree {
+class BinTree {
 private:
     struct Node {
         int data;
@@ -10,21 +10,21 @@ private:
         Node(const int k) : data(k), left(nullptr), right(nullptr) {}
     };
 
-    Node* root;
+    Node* _root;
     Node* copyTree(const Node* otherNode);
     Node* findMin(Node* node) const;
-    Node* searchRecursive(Node* node, int key);
-    void eraseRecursive(Node*& node, const int key);
-    void destroyRecursive(Node* node);
-    void printRecursive(Node* node, const std::string& prefix = "", bool isLeft = true) const;
-    bool containsRecursive(Node* node, const int key) const;
-    int countRecursive(Node* node);
+    Node* search_rec(Node* node, int key);
+    void delete_rec(Node*& node, const int key);
+    void destroy_rec(Node* node);
+    void print_rec(Node* node, const std::string& prefix = "", bool isLeft = true) const;
+    bool contains_rec(Node* node, const int key) const;
+    int count_rec(Node* node);
 
 public:
-    BinarySearchTree();
-    BinarySearchTree(const BinarySearchTree& other);
-    ~BinarySearchTree();
-    BinarySearchTree& operator=(const BinarySearchTree& other);
+    BinTree();
+    BinTree(const BinTree& other);
+    ~BinTree();
+    BinTree& operator=(const BinTree& other);
 
     void print() const;
     bool insert(int key);
