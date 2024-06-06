@@ -17,7 +17,7 @@ std::vector<int> findDuplicates(const std::vector<int>& inputVector) {
     return result;
 }
 
-int main() {
+/*int main() {
     std::vector<int> vector{ 1,5,5,2,7,9,11,11 };
     std::vector<int> duplicates = findDuplicates(vector);
     std::cout << "default vector: ";
@@ -27,4 +27,4 @@ int main() {
     std::cout << "duplicates vector: ";
     for (int i = 0; i < duplicates.size(); ++i)
         std::cout << duplicates[i] << " ";
-}
+}*/

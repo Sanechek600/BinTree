@@ -21,7 +21,7 @@ double measureTime(Function func) {
     auto duration = end - start;
     return std::chrono::duration <double, std::milli>(duration).count();
 }
-/*int main() {
+int main() {
     //bst
     double averageFillTime = 0;
     for (int attempt = 0; attempt < ATTEMPTS; ++attempt) {
@@ -84,4 +84,4 @@ double measureTime(Function func) {
         if (it != stdVector.end()) stdVector.erase(it);
         });
     std::cout << "Vector add/remove time: " << std::fixed << std::setprecision(5) << vectorAddRemoveTime << " ms" << std::endl;
-}*/
+}
